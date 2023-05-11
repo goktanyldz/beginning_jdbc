@@ -15,9 +15,9 @@ public class Test {
         while(dongu == true){   //
             menuYazdir();
             System.out.print("İşlem seçiniz:");
-            int secimSayisi = scanner.nextInt(); // menüdeki seçimlerimi belirtmek için kullanıcıdan değer aldım.
+            int secimSayisi = scanner.nextInt(); 
             System.out.println("----------------");
-            if (secimSayisi >0 && secimSayisi<6) { // eğer kullanıcı menüde belirttiğim işlemlere karşılık gelen 1 2 3 4 5 sayılarından birini girerse bu sayılara göre işlemleri yaptırdım.
+            if (secimSayisi >0 && secimSayisi<6) { 
                 if (secimSayisi == 1) {
                     System.out.println("Lütfen eklemek istediğiniz ürünün Id'sini giriniz: ");
                     long productId = scanner.nextLong();
@@ -51,11 +51,11 @@ public class Test {
                 } else if (secimSayisi == 5) {
                     productManager.list();
                 }
-            } else if (secimSayisi == 6) { // Kullanıcı bu değer aralığında 5 değerini yani programı sonlandır seceneğini secer ise dongu değişkenini false yaparak donguyu sonlandırdım ve program sonlandı.
+            } else if (secimSayisi == 6) { 
                 dongu = false;
             }
-            else { // Kullanıcı 1 2 3 4 5 6 sayılarını girmez farklı sayılar girerse uyarı almasını sağladım..
-                System.out.println("UYARI: İşlem yapabilmek için 1 ile 5 arasında bir sayı seçilmelidir!");
+            else { 
+                System.out.println("UYARI: İşlem yapabilmek için 1 ile 6 arasında bir sayı seçilmelidir!");
                 System.out.println("Devam etmek için bir tuşa ve sonrasında ENTER tuşuna basınız:");
                 String tus = scanner.next();
             }
@@ -65,7 +65,7 @@ public class Test {
     private static void baslikYazdir(){
         System.out.println("****************************************\n*** ÜRÜN STOK BİLGİSİ ***\n****************************************");
     }
-    //Menü yazdırmak için kullandığım methodu oluşturdum
+   
     private static void menuYazdir(){
         System.out.println("\nMENÜ:\n(1) Ürün ekle \n(2) Ürün güncelle\n(3) Ürün sil \n(4) Ürün bul\n(5) Tüm ürünleri listele\n(6) Programı sonlandır");//n ile alt satıra geçmesini sağladım .
     }
